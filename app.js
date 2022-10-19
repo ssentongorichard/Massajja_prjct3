@@ -11,9 +11,17 @@ const expressSession = require('express-session')({
     resave: false,
     saveUninitialized: false,  
 });
+//import user model
+const Registration = require('./models/User')
 
 //Importing route files
-const registrationRoutes = require('./routes/registerRoutes')
+const registrationRoutes = require('./routes/registerRoutes');
+const homeRoutes = require('./routes/homeRoutes');
+const authRoutes = require('./routes/authRoutes');
+const dashboardRoutes = require('./routes/dashboardRoutes');
+const produceRoutes = require('./routes/produceRoutes');
+const uploadRoutes = require('./routes/uploadRoutes');
+
 // INSTATIATIONS
 const app = express();
 //setup database connections
@@ -47,25 +55,23 @@ app.use('/public/uploads', express.static(__dirname + '/public/uploads'))
 app.use(expressSession);
 
 
-// Simple request time logger
-app.use((req, res, next) => {
-	console.log("A new request received at " + Date.now());
-
-	// This function call tells that more processing is
-	// required for the current request and is in the next middleware
-	// function/route handler.
-	next();
-});
-
-
 
 //passport configuration middleware
 app.use(passport.initialize());
 app.use(passport.session());
-
+passport.use(Registration.createStrategy());
+passport.serializeUser(Registration.serializeUser());
+passport.deserializeUser(Registration.deserializeUser());
 
 //ROUTES
-app.use('/user',registrationRoutes)
+app.use('/',registrationRoutes);
+app.use('/',homeRoutes);
+app.use('/',authRoutes);
+app.use('/',dashboardRoutes);
+app.use('/',produceRoutes);
+app.use('/',uploadRoutes);
+
+
 
 // For invalid routes. always the last route in the server file(index.js).
 app.get("*", (req, res) => {

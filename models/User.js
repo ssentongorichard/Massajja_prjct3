@@ -1,6 +1,22 @@
 const mongoose = require('mongoose');
+const passportLocalMongoose = require('passport-local-mongoose');
 
 const userSchema = new mongoose.Schema({
+role: {
+    type:String,
+    required: true
+},
+username: {
+    type:String,
+    required: true,
+    trim: true
+},
+password: {
+    type:String,
+    required: true,
+    trim: true
+
+},   
 datetoday:{
     type:Date,
     required: true,
@@ -11,45 +27,41 @@ names: {
     required: true
 },
 dateofbirth:{
-    type:Date,
-    required: true
-}
+    type:Date
+},
 ward: {
-    type:String,
-    required: true
+    type:String
 },
 gender: {
-    type:String,
-    required: true
+    type:String
 },
 
 activity: {
-    type:String,
-    required: true
+    type:String
 },
 residence: {
-    type:String,
-    required: true
+    type:String
 },
 foid: {
     type:String,
-    required: true
+    unique: true
 },
 nid: {
     type:String,
-    required: true
+    unique: true
 },
 phone: {
-    type:String,
-    required: true
+    type:String
 },
 yearsofstay: {
-    type:number,
-    required: true,
+    type:Number,
     trim: true
 },
 address: {
-    type:String,
-    required: true
+    type:String
 },
 })
+userSchema.plugin(passportLocalMongoose,{
+ usernameField: 'foid'  
+})
+module.exports = mongoose.model('Registration',userSchema);

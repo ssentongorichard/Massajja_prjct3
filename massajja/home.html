@@ -6,16 +6,16 @@
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet" >
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
     <script src='main.js'></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
   </head>
 <body>
 
 <!-- nav bar -->
-    <nav class="navbar navbar-expand-lg  fixed-top" style="background-color:rgb(13, 14, 13);">
+    <nav class="navbar navbar-expand-lg  fixed-top navbgcolor">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#" style="color:white;"><h4> UFARM</h4></a>
+          <a class="navbar-brand white" href="#"><h4> UFARM</h4></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -32,12 +32,12 @@
                   <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
               </li>
-              <li><a class="nav-link active white" aria-current="page" href="#" >Home</a></li>
+              <li><a class="nav-link white" aria-current="page" href="#" >Home</a></li>
               <li><a class="nav-link white" href="#" >About Us</a></li>
             </ul>
             <form class="d-flex">
               <div class="container-fluid">
-                <a class="navbar-brand white" href="#">Contact:Email ufarm123@gmail.com Mobile +256755174746</a>
+                <a class="navbar-brand white" href="#"><a href="#" class="btn btn-success">Login</a></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -46,16 +46,6 @@
           </div>
         </div>
       </nav>
-<!-- nav -->
-<ul class="nav justify-content-end nav1 bgcolor">
-  <li class="nav-item">
-      <a class="nav-link disabled"><i class="bi bi-person"></i>You are not logged in</a>
-    </li>
-  <li class="nav-item">
-      <a class="nav-link" href="#">Login</a>
-    </li>
-</ul> 
-
    <!-- Carousel -->
    <div id="demo" class="carousel slide" data-bs-ride="carousel" carousel-caption align-items-center d-flex>
 
@@ -133,10 +123,13 @@
 </div>
 <!-- end of products -->
         <div class="container-fluid" style="padding: 20px;">
-        <p><h1 class="center"><strong>Market at your door <i class="bi bi-cart4"></i></strong></h1></p>
+        <p><h1 class="center"><strong>Market at your door <i class="bi bi-cart4" style="color:green ;"></i></strong></h1></p>
         </div>
 
         <!-- footer -->
+    <div class="row text-bg-dark  container-fluid  ftmargin">
+      Contacts:Email ufarm123@gmail.com Mobile +256755174746
+    </div>    
         
        
     <script src="bootstrap/js/bootstrap.bundle.js"></script>

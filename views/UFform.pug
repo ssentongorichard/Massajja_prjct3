@@ -2,26 +2,25 @@ head
   meta(charset='UTF-8')
   meta(http-equiv='X-UA-Compatible', content='IE=edge')
   meta(name='viewport', content='width=device-width, initial-scale=1.0')
-  title Urban Farmer details
+  title Produce details
   link(rel='stylesheet', type='text/css', href='../css/style.css')
 .container
   header
     h1#title MASSAJJA URBAN FARMER INITIATIVE
   #form-wrapper
-    form#register-form(action='/register', method='post')
+    form#register-form(action='/', method='post')
       .container2
         .padding.width
           select#role(name='role')
-            option(value='select your role') Role
+            option(value='select your Ward') Role
             |                 &gt;
-            option(value='FO') FO
-            option(value='UF') UF
+            option(value='WardA') AO
+            option(value='wardB') FO
+            option(value='wardC') UF
       .padding
         input#datetoday.form-control-2(type='date', name='datetoday', placeholder='date')
       .padding
-        input#names.form-control-2(type='text', name='names', placeholder='Fullname')
-      .padding
-        input#dateofbirth.form-control-2(type='date', name='dateofbirth', placeholder='dateOfBirth')
+        input#names.form-control-2(type='text', name='names', placeholder='Produce name')
       .container2
         .padding
           select#ward(name='ward')
@@ -31,37 +30,33 @@ head
             option(value='wardB') ward B
             option(value='wardC') ward C
         .padding
-          select#dropdown(name='gender')
-            option(value='select your Gender') Select Gender
+          select#payment(name='payment')
+            option(value='select payment') Select mode of pay
             |                 &gt;
-            option(value='Male') Male
-            option(value='Female') Female
-            option(value='Secret') Secret
+            option(value='Male') Mobile
+            option(value='Female') Paypal
+            option(value='Secret') Bank
         .padding
-          select#activity(name='activity')
-            option(value='select activity') Activity done
+          select#produce(name='roduce')
+            option(value='select produce') Produce type
             |                 &gt;
             option(value='Dairy') Dairy
-            option(value='Poultry') Poultry
             option(value='Hoticulture') Hoticulture
-        .padding
-          select#residence(name='residence')
-            option(value='select residence type') Select Residence
-            |                 &gt;
-            option(value='Permanent') Permanent
-            option(value='Temporary') Temporary
-            option(value='Others') Others
+            option(value='Poultry') Paultry
         .padding
           input#username.form-control-2.form-float.width2(type='text', name='username', placeholder='User name')
       .container3
         .padding
-          input#foid.form-control-2(type='text', name='foid', placeholder='FO Id')
+          input#price.form-control-2(type='text', name='price', placeholder='Price')
         .padding
-          input#nid.form-control(type='text', name='nid', placeholder='NIN')
+          input#quantity.form-control(type='text', name='quantity', placeholder='Quantity')
         .padding
-          input#phone.form-control-2(type='text', name='phone', placeholder='Phone')
-        .padding
-          input#yearsofstay.form-control-2.form-float(type='text', name='yearsofstay', placeholder='Years stayed')
+          select#delivery(name='delivery', style='width: 260px')
+            option(value='select delivery') Delivery mode
+            |                 &gt;
+            option(value='Door') Door
+            option(value='Centred') Centered
+            option(value='Pickup') Pick UP
         .padding
           input#password.form-control-2.form-float(type='text', name='password', placeholder='Password')
       .padding

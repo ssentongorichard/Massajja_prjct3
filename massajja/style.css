@@ -1,15 +1,6 @@
 
-body {
-    color: black;
-    background: linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)), url(./image/hen.jpg);
-}
-
-body {
-    display: block;
-    margin: 8px;
-} */
 body{
-    background-image: url(./images/image5.jpg);
+    background-image: url(../image/1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background: linear-gradient(to bottom, #000000b8, #000000b8), url('./image/1.jpg');
@@ -18,7 +9,7 @@ body{
 }
     .container {
       width: 50%;
-      height: 30%;
+      height: %;
       margin: auto;
     }
     
@@ -29,8 +20,7 @@ body{
       font-weight: bold;
     }
     #form-wrapper {
-      background:linear-gradient(50deg,rgb(225,225,225,0.8), rgba(94, 113, 98, 0.8));
-      
+      background:linear-gradient(10deg,rgba(253, 251, 251, 0.8), rgba(241, 246, 244, 0.8));
       justify-content: center;
       padding: 15px;
       border-radius: 8px;
@@ -46,7 +36,7 @@ body{
       padding: 5px;
       display: block;
       border: none;
-      background-color: lightgreen;
+      background-color: green;
       font-size: 24px;
       border-radius: 8px;
     }
@@ -82,4 +72,18 @@ body{
        font-family: sans-serif;
        color: white;
      }
+     .padding {
+      padding-bottom: 20px;
+     }
+     .width{
+      width: 100px;
+     }
+     .width2 {
+      width: 230px;
+     }
+     .width3 {
+      width: 200px;
+     }
+
+
      
